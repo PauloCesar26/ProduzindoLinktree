@@ -10,7 +10,7 @@ body{
     min-width: 450px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #e9e9e9;
+    background-color: #000000;
 }
 a{
     text-decoration: none;
@@ -45,10 +45,17 @@ nav{
     position: relative;
     font-size: 1.1rem;
 }
+.logo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .logo img{
-    max-width: 100%;
-
-    max-height: 140px;
+    width: 150px;
+    max-height: 150px;
+    margin: 0;
+    padding: 0;
 }
 /* .menu{
     display: flex;
@@ -83,10 +90,12 @@ nav{
 .contato{
     background-image: linear-gradient(to left,#cc7e18 10%, #f1b15c 70%);
     color: rgb(0, 0, 0);
+    width: 18rem;
     padding: 0.9rem 4rem 0.9rem 2rem;
     border-radius: 8px;
     transition: all 900ms ease-in-out;
 }
+
 .contato:hover{
     background-image: linear-gradient(#f1b15c, #f1b15c);
     color: rgb(0, 0, 0);
@@ -145,12 +154,9 @@ section:nth-child(1){
     max-width: 100%;
 }
 .carousel-item .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: brightness(60%);
     z-index: 1; 
 }
 .carousel-caption{
@@ -163,17 +169,24 @@ section:nth-child(1){
     color: white; 
     align-items: center;
 }
-.carousel-caption h2{
-    font-size: 3.5rem;
+.carousel-caption h1{
+    font-family: "Meow Script", serif;
+    font-weight: 400;
+    font-size: 2.5rem;
 }
 .carousel-caption p{
-    font-size: 1.5rem;
+    width: 95%;
+    margin-top: 0.8rem;
+    font-size: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 .container-cap{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 60%;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -186,6 +199,7 @@ section:nth-child(1){
     height: auto;
     background-color: #740038;
     padding: 1.2rem 2rem;
+    padding-bottom: 2rem;
 }
 .links-social h1{
     width: 100%;
@@ -243,7 +257,7 @@ section:nth-child(1){
 }
 
 /* Estilo dos elementos individuais */
-#container-footer .horario, .doces{
+.horario, .doces{
     padding: 1rem 2rem; /* Espaçamento interno lateral */
     text-align: justify; /* Centralizar o texto */
     border-right: 1px solid #fff; /* Borda lateral direita */
@@ -394,6 +408,15 @@ section:nth-child(1){
         margin-bottom: 10px;
     } */
     .contato{
-        padding: 0.9rem 10rem 0.9rem 2rem;
+        width: 30rem;
+    }
+    .carousel-caption p{
+        font-size: 2rem;
+    }
+
+}
+@media screen and (max-width: 500px){
+    .contato{
+        width: 25rem;
     }
 }
